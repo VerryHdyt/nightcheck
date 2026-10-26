@@ -1,0 +1,14 @@
+
+{
+  "name": "nightcheck",
+  "version": "0.3.0",
+  "description": "HTTP Security Header Checker CLI",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node --test",
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "ipaddr.js": "^2.2.0"
+  }
+}
