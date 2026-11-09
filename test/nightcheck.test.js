@@ -119,3 +119,10 @@ test("mengikuti redirect dan memeriksa header URL tujuan", async (t) => {
   assert.equal(header.present, true);
   assert.equal(header.value, "nosniff");
 });
+
+test("menolak URL yang mengandung kredensial", async () => {
+  await assert.rejects(
+    checkHeaders("https://user:password@example.com"),
+    /URL tidak boleh berisi kredensial/
+  );
+});
